@@ -52,7 +52,9 @@ import com.github.jsonldjava.utils.JsonUtils;
  * 
  * @author Rupert Westenthaler
  */
-@Component(immediate = true, policy = ConfigurationPolicy.OPTIONAL)
+@Component(immediate = true, 
+    policy = ConfigurationPolicy.OPTIONAL,
+    metatype = true)
 @Service
 @SupportedFormat(value = { "application/ld+json", "application/json" })
 public class JsonLdSerializingProvider implements SerializingProvider {
